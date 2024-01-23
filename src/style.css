@@ -2,22 +2,118 @@ body{
     background-image: url('../src/stars.jpg');
     background-size:cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
 }
 
 .weather-app-container{
     color: rgba(255, 255, 255, 0.719);
-    max-width: 600px;
+    max-width:600px;
 }
 
 .search-input{
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     margin: 20px 10px ;
     padding: 15px 15px;
     width: 70%;
     font-size: 18px;
+    box-shadow:0px 2px 5px 0 rgba(114, 108, 108, 0.42);
+    opacity: 0.5;
+}
+.city{
+    font-size: 38px;
+    line-height:48px ;
 }
 
-.submit
+.submit-input{
+border-radius:5px;
+border: none;
+padding: 15px;
+width: 18%;
+background-color: rgb(255, 0, 68);
+color:rgba(0, 0, 0, 0.806);
+font-size: 18px;
+}
+
+footer{
+    text-align: center;
+    font-size: small;
+    border-top: 1px solid rgba(0, 0, 128, 0.858);
+    margin-top: 200px;
+    
+    
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 0, 68);
+}
+
+.description{
+    display: flex;
+    justify-content: end;
+     margin-top: -65px;   
+
+}
+
+.description .temp{
+    font-size: 40px;
+}
+
+.description .unit{
+    font-size: 20px;
+    position: relative;
+    top: -10px;   
+}
+.description .icon{
+    font-size: 30px;
+}
+
+.humidity span{
+    color:rgb(255, 0, 68);
+}
+
+.weather-city{
+    font-size: 16px;    
+}
+
+.weather-forecast{
+    margin: 55px;
+    line-height: 40px; 
+
+}
+
+.weather-forecast-day{
+background: rgb(255, 0, 68);
+color: rgba(0, 0, 0, 0.856);
+padding: 5px 15px;
+border-radius: 50px;
+}
+
+
+.weather-forecast-icon{
+    font-size: 30px ;
+}
+
+.weather-forecast-min{
+    font-size: 18px;
+    font-weight: bold;
+    color:rgb(255, 0, 68);
+}
+
+.weather-forecast-max{
+    font-size: 18px;
+    color:rgb(255, 0, 68);
+    
+
+}
+
+@media screen {
+    
+}
+
+
+
+
 
