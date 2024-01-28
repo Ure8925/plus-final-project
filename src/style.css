@@ -1,14 +1,14 @@
 body{
     background-image: url('../src/stars.jpg');
-    background-size:cover;
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
 }
 
 .weather-app-container{
-    color: rgba(255, 255, 255, 0.719);
-    max-width:600px;
+     color: rgb(220, 220, 220);
+     max-width: 800px;
 }
 
 .search-input{
@@ -109,7 +109,29 @@ border-radius: 50px;
 
 }
 
-@media screen {
+
+@media (max-width:500px) {
+   .submit-input {
+     width: 20%;
+    text-align: center;
+   }
+}
+
+
+@media (max-width:360px) {
+    .submit-input{
+        width:22.5%;
+        text-align: center;
+    }
+}
+
+@media  (max-width: 280px) {
+.search-input{
+    width: 60%;
+} 
+.submit-input{
+    width: 30%;
+}
     
 }
 
