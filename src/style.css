@@ -1,5 +1,5 @@
 body{
-    background-image: url('../src/stars.jpg');
+    background-image: url('../images/stars.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -9,6 +9,10 @@ body{
 .weather-app-container{
      color: rgb(220, 220, 220);
      max-width: 800px;
+}
+
+.weather-app-details{
+    line-height: 25px;
 }
 
 .search-input{
@@ -69,6 +73,8 @@ a{
 }
 .description .icon{
     font-size: 40px;
+    margin-right: 10px;
+    position: relative;
 }
 
 .humidity span{

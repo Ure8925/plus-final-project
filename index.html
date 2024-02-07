@@ -22,16 +22,18 @@
     <div class="weather-app-content">
         <div class="weather-city">
             <h1 class="city" id="weather-city"></h1>
-            <p>
-                <div class="date" id="date">Monday 18:41, <span id="description"></span></div>
-               <div class="humidity" id="humidty"> Humidity: <span>76%</span>, wind:<span>16km/hr</span></div>
+            <p class="weather-app-details">
+               <span id="current-time"></span>,
+               <span id="description"></span> 
+                <br />
+                Humidity: <span id="humidity"></span>, wind:<span id="wind"></span>
               <div class="description">
-                <span class="icon">⛅</span>
+                <span class="icon" id="icon">⛅</span>
                 <span class="temp" id="weather-temperature"></span>
                 <span class="unit">℃</span> 
             </p>
         </div>
-    </div>
+    
     <div class="weather-forecast">
     <span class="weather-forecast-day"> Thur</span>
     <div class="weather-forecast-icon">☀️</div>
