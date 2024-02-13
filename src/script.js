@@ -12,12 +12,13 @@ function displayWeatherInfo(response) {
   
     currentTime.innerHTML = realTimeDate(date);
     descriptionElement.innerHTML = response.data.condition.description;
-    iconElement.innerHTML = response.data.condition.icon;
     humidity.innerHTML = `${response.data.temperature.humidity}%`;
     windElement.innerHTML= `${response.data.wind.speed}km/h`;
     weatherCityElement.innerHTML = response.data.city;
   weatherTemperature.innerHTML = Math.round(temperature);
+   iconElement.innerHTML = `<img src ="${response.data.condition.icon_url}" class="weather-icon" />`;
 }
+  
 function searchCity(city) {
   let apiKey = "302ea8odf48556tb65f5340850929f02";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -42,6 +43,34 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function showForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
+  let forecastHtml = "";
+
+  days.forEach(function(days) {
+  forecastHtml = 
+  forecastHtml +
+  `
+    <span class="weather-forecast-day"> ${days}</span>
+    <div class="weather-icon-info">
+    <div class="weather-forecast-icon">☀️</div>
+    <div class="weather-forecast-info"> <span class="weather-forecast-min">26°</span>
+     <span class="weather-forecast-max">32°</span> 
+     </div>
+    </div>
+    `;
+  });
+
+  let dailyForecast = document.querySelector("#weather-forecast");
+  dailyForecast.innerHTML = forecastHtml;
+}
+
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 searchCity("Lagos");
+showForecast();
+
+
+   
+    
