@@ -43,19 +43,28 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function showForecast() {
+function getWeatherForecast(city){
+  let apiKey= "302ea8odf48556tb65f5340850929f02";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
+  
+}
+
+function showForecast(response) {
+  console.log(response.data);
   let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
   let forecastHtml = "";
 
   days.forEach(function(days) {
   forecastHtml = 
   forecastHtml +
-  `
+  `<div>
     <span class="weather-forecast-day"> ${days}</span>
-    <div class="weather-icon-info">
+    <div>
     <div class="weather-forecast-icon">☀️</div>
     <div class="weather-forecast-info"> <span class="weather-forecast-min">26°</span>
      <span class="weather-forecast-max">32°</span> 
+     </div>
      </div>
     </div>
     `;
@@ -69,7 +78,8 @@ function showForecast() {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 searchCity("Lagos");
-showForecast();
+getWeatherForecast("Lagos");
+
 
 
    
