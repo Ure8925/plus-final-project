@@ -16,7 +16,7 @@ body {
   color: rgb(220, 220, 220);
   margin: 15px;
   padding: 25px 15px;
-  max-width: 800px;
+  max-width: 1020px;
 }
 
 .weather-app-details {
@@ -28,7 +28,7 @@ body {
   border: none;
   margin: 15px 10px;
   padding: 15px 15px;
-  width: 70%;
+  width: 48%;
   font-size: 18px;
   box-shadow: 0px 2px 5px 0 rgba(114, 108, 108, 0.42);
   opacity: 0.5;
@@ -43,7 +43,7 @@ body {
   border-radius: 5px;
   border: none;
   padding: 15px;
-  width: 18%;
+  width: 15%;
   cursor: pointer;
   background-color: rgb(255, 0, 68);
   color: rgba(0, 0, 0, 0.806);
@@ -52,7 +52,7 @@ body {
 
 footer {
   text-align: center;
-  font-size: small;
+  font-size: medium;
   border-top: 1px solid rgba(0, 0, 128, 0.858);
   margin-top: 150px;
 }
@@ -112,15 +112,16 @@ a {
   color: rgba(0, 0, 0, 0.856);
   padding: 5px 15px;
   border-radius: 50px;
-  width:40px;
-  height: 40px;
+  display: block;
+  width:60px;
+  height: 50px;
   text-align: center; 
 }
 
 .weather-forecast-icon {
   font-size: 45px;
-  margin-top: 40px;
-
+  margin-top: 18px;
+  margin-right: -10px;
      
 }
 
@@ -128,13 +129,16 @@ a {
   font-size: 18px;
   font-weight: bold;
   color: rgb(255, 0, 68);
-  margin-top: 15px;
-  padding: 10px;
+  right:-5px;
+  padding: 5px;
 }
 
 .weather-forecast-max {
   font-size: 18px;
   color: rgb(255, 0, 68);
+  right: -5px;
+  padding: 5px;
+  
 }
 
 @media (max-width: 500px) {
@@ -147,7 +151,7 @@ a {
 
 @media (max-width: 360px) {
   .submit-input {
-    width: 22.5%;
+    width: 25%;
     text-align: center;
   }
 }
